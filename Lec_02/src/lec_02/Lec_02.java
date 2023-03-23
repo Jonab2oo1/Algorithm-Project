@@ -57,9 +57,9 @@ public class Lec_02 extends Application {
           rectangle.setHeight(100);
           
           Circle circle = new Circle();
-          circle.setCenterX(100); //Setting the Properties of the Circle
-          circle.setCenterY(100);
-          circle.setRadius(50);
+          circle.setCenterX(150); //Setting the Properties of the Circle
+          circle.setCenterY(150);
+          circle.setRadius(20);
 
           Line line = new Line(100 , 250 , 250 , 250 ) ;
           line.setFill(Color.DEEPPINK);
