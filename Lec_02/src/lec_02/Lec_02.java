@@ -5,6 +5,7 @@
  */
 package lec_02;
 
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -12,6 +13,8 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
@@ -48,8 +51,14 @@ public class Lec_02 extends Application {
 //        primaryStage.setTitle("Hello World!");
 //        primaryStage.setScene(scene);
 //        primaryStage.show();
+          Image image = new Image("https://cdn.britannica.com/85/13085-050-C2E88389/Corpus-Christi-College-University-of-Cambridge-England.jpg");
+          ImageView imageView = new ImageView(image);
+          imageView.setX(50); 
+          imageView.setY(25);
+          imageView.setFitHeight(200); //setting the fit height and width of the image view
+          imageView.setFitWidth(200);
+          imageView.setPreserveRatio(true) ;
 
-          
           Rectangle rectangle = new Rectangle(); 
           rectangle.setX(120); //Setting the Properties of the Rectangle
           rectangle.setY(120);
@@ -65,7 +74,7 @@ public class Lec_02 extends Application {
           line.setFill(Color.DEEPPINK);
           
           Text text = new Text(50,50,"السلام عليكم ");
-          text.setFont(Font.font(STYLESHEET_CASPIAN,FontWeight.BOLD, FontPosture.REGULAR, 50));
+          text.setFont(Font.font(STYLESHEET_CASPIAN,FontWeight.BOLD, FontPosture.REGULAR, 20));
           text.setFill(Color.DEEPPINK);
           text.setStroke(Color.BLACK);
           text.setStrokeWidth(2);
@@ -74,7 +83,7 @@ public class Lec_02 extends Application {
           //text.setStrikethrough(true);
           //StackPane root_pane = new StackPane(text,line);
           
-          Group group = new Group( text , circle);
+          Group group = new Group( imageView );
           Scene scene = new Scene(group,300,300);
           scene.setFill(Color.BEIGE);
           primaryStage.setTitle("Lec_02");
