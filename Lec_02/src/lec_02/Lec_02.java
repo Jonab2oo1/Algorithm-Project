@@ -53,8 +53,8 @@ public class Lec_02 extends Application {
 //        primaryStage.show();
           Image image = new Image("https://cdn.britannica.com/85/13085-050-C2E88389/Corpus-Christi-College-University-of-Cambridge-England.jpg");
           ImageView imageView = new ImageView(image);
-          imageView.setX(50); 
-          imageView.setY(25);
+          imageView.setX(70); 
+          imageView.setY(150);
           imageView.setFitHeight(200); //setting the fit height and width of the image view
           imageView.setFitWidth(200);
           imageView.setPreserveRatio(true) ;
@@ -73,18 +73,18 @@ public class Lec_02 extends Application {
           Line line = new Line(100 , 250 , 250 , 250 ) ;
           line.setFill(Color.DEEPPINK);
           
-          Text text = new Text(50,50,"السلام عليكم ");
-          text.setFont(Font.font(STYLESHEET_CASPIAN,FontWeight.BOLD, FontPosture.REGULAR, 20));
-          text.setFill(Color.DEEPPINK);
-          text.setStroke(Color.BLACK);
+          Text text = new Text(50,50,"Once upon a time you were \na small child with BIG DREAMS \nthat you promised you'd make real \none day Don't disappoint yourselfe ");
+          text.setFont(Font.font(STYLESHEET_CASPIAN,FontWeight.BOLD, FontPosture.REGULAR, 15));
+          text.setFill(Color.DARKSEAGREEN);
+         // text.setStroke(Color.BLACK);
           text.setStrokeWidth(2);
-          text.setUnderline(true);
+          //text.setUnderline(true);
           
           //text.setStrikethrough(true);
           //StackPane root_pane = new StackPane(text,line);
           
-          Group group = new Group( imageView );
-          Scene scene = new Scene(group,300,300);
+          Group group = new Group( imageView , text );
+          Scene scene = new Scene(group,350,350);
           scene.setFill(Color.BEIGE);
           primaryStage.setTitle("Lec_02");
           primaryStage.setScene(scene);
