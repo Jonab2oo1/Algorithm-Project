@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
@@ -59,16 +60,21 @@ public class Lec_02 extends Application {
           imageView.setFitWidth(200);
           imageView.setPreserveRatio(true) ;
 
+          Circle circle = new Circle();
+          circle.setCenterX(150); //Setting the Properties of the Circle
+          circle.setCenterY(150);
+          circle.setRadius(20);
+          
+         ImagePattern pattern = new ImagePattern(image, 20, 20, 40, 40, false);
+         //Setting the image pattern to the circle and text
+         circle.setFill(pattern);
+         //text.setFill(pattern);
           Rectangle rectangle = new Rectangle(); 
           rectangle.setX(120); //Setting the Properties of the Rectangle
           rectangle.setY(120);
           rectangle.setWidth(200);
           rectangle.setHeight(100);
           
-          Circle circle = new Circle();
-          circle.setCenterX(150); //Setting the Properties of the Circle
-          circle.setCenterY(150);
-          circle.setRadius(20);
 
           Line line = new Line(100 , 250 , 250 , 250 ) ;
           line.setFill(Color.DEEPPINK);
@@ -83,7 +89,7 @@ public class Lec_02 extends Application {
           //text.setStrikethrough(true);
           //StackPane root_pane = new StackPane(text,line);
           
-          Group group = new Group( imageView , text );
+          Group group = new Group( imageView , text , circle );
           Scene scene = new Scene(group,350,350);
           scene.setFill(Color.BEIGE);
           primaryStage.setTitle("Lec_02");
